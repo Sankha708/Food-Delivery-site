@@ -1,0 +1,155 @@
+<svg width="680" height="400" viewBox="0 0 680 400" role="img" xmlns="http://www.w3.org/2000/svg">
+  <title>GaramGaram Animated Logo</title>
+  <desc>GaramGaram food delivery logo with animated rising steam and flickering flame</desc>
+
+  <defs>
+    <radialGradient id="bowl-glow" cx="50%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#FF6B00" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FF6B00" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="inner-grad" cx="50%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#fff9f5"/>
+      <stop offset="100%" stop-color="#ffd9b8"/>
+    </radialGradient>
+
+    <style>
+      @keyframes steam1 {
+        0%   { transform: translateY(0px) scaleX(1);    opacity: 0.55; }
+        50%  { transform: translateY(-18px) scaleX(1.3); opacity: 0.3;  }
+        100% { transform: translateY(-36px) scaleX(0.8); opacity: 0;    }
+      }
+      @keyframes steam2 {
+        0%   { transform: translateY(0px) scaleX(1);    opacity: 0.65; }
+        50%  { transform: translateY(-20px) scaleX(1.4); opacity: 0.35; }
+        100% { transform: translateY(-40px) scaleX(0.7); opacity: 0;    }
+      }
+      @keyframes steam3 {
+        0%   { transform: translateY(0px) scaleX(1);    opacity: 0.5;  }
+        50%  { transform: translateY(-16px) scaleX(1.2); opacity: 0.28; }
+        100% { transform: translateY(-32px) scaleX(0.9); opacity: 0;    }
+      }
+      @keyframes flicker1 {
+        0%,100% { transform: scaleX(1)    scaleY(1);    opacity: 1;    }
+        30%     { transform: scaleX(1.04) scaleY(0.97); opacity: 0.92; }
+        60%     { transform: scaleX(0.97) scaleY(1.03); opacity: 0.96; }
+      }
+      @keyframes flicker2 {
+        0%,100% { transform: scaleX(1)    scaleY(1);    opacity: 1;    }
+        40%     { transform: scaleX(1.06) scaleY(0.95); opacity: 0.88; }
+        70%     { transform: scaleX(0.95) scaleY(1.05); opacity: 0.95; }
+      }
+      @keyframes glow-pulse {
+        0%,100% { opacity: 1;    }
+        50%     { opacity: 1.5;  }
+      }
+
+      .steam-left  {
+        transform-origin: 295px 165px;
+        animation: steam1 2.2s ease-in-out infinite;
+      }
+      .steam-mid   {
+        transform-origin: 340px 155px;
+        animation: steam2 2s ease-in-out infinite 0.4s;
+      }
+      .steam-right {
+        transform-origin: 385px 165px;
+        animation: steam3 2.4s ease-in-out infinite 0.8s;
+      }
+      .flame-outer {
+        transform-origin: 340px 248px;
+        animation: flicker1 1.4s ease-in-out infinite;
+      }
+      .flame-mid   {
+        transform-origin: 340px 252px;
+        animation: flicker2 1.1s ease-in-out infinite 0.2s;
+      }
+      .flame-inner {
+        transform-origin: 340px 254px;
+        animation: flicker1 0.9s ease-in-out infinite 0.1s;
+      }
+      .bg-glow {
+        animation: glow-pulse 2s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background glow -->
+  <ellipse class="bg-glow" cx="340" cy="210" rx="210" ry="160" fill="url(#bowl-glow)"/>
+
+  <!-- Bowl shadow -->
+  <ellipse cx="343" cy="312" rx="88" ry="12" fill="#d44a00" opacity="0.18"/>
+
+  <!-- Bowl outer body -->
+  <path d="M220 210 Q230 310 340 318 Q450 310 460 210 Z" fill="#C0401A"/>
+
+  <!-- Bowl inner -->
+  <path d="M228 210 Q238 304 340 312 Q442 304 452 210 Z" fill="url(#inner-grad)"/>
+
+  <!-- Bowl rim -->
+  <ellipse cx="340" cy="210" rx="116" ry="20" fill="#E25C1A"/>
+  <ellipse cx="340" cy="208" rx="116" ry="20" fill="none" stroke="#FF8C42" stroke-width="3" opacity="0.6"/>
+  <ellipse cx="320" cy="206" rx="46" ry="7" fill="#FF9D5C" opacity="0.45"/>
+
+  <!-- Steam wisps - animated -->
+  <path class="steam-left"
+        d="M295 195 Q289 178 295 162 Q301 146 295 130"
+        fill="none" stroke="#FF8C42" stroke-width="4" stroke-linecap="round"/>
+
+  <path class="steam-mid"
+        d="M340 190 Q334 170 340 152 Q346 134 340 116"
+        fill="none" stroke="#FF6B00" stroke-width="4" stroke-linecap="round"/>
+
+  <path class="steam-right"
+        d="M385 195 Q391 178 385 162 Q379 146 385 130"
+        fill="none" stroke="#FF8C42" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Flame outer - animated -->
+  <path class="flame-outer"
+        d="M340 288 Q316 272 312 250 Q308 228 322 216 Q318 234 330 238
+           Q322 218 334 200 Q336 222 344 228 Q348 210 358 198
+           Q366 220 360 240 Q372 232 370 216 Q382 228 378 252
+           Q374 272 364 288 Q356 296 340 298 Z"
+        fill="#E23010"/>
+
+  <!-- Flame mid - animated -->
+  <path class="flame-mid"
+        d="M340 284 Q322 268 320 250 Q318 234 330 224 Q328 238 336 242
+           Q338 226 346 214 Q352 232 348 246 Q358 238 356 226
+           Q366 238 362 254 Q360 270 348 284 Q344 290 340 292 Z"
+        fill="#FF6B00"/>
+
+  <!-- Flame inner - animated -->
+  <path class="flame-inner"
+        d="M340 278 Q328 262 328 248 Q328 238 336 232 Q336 244 342 248
+           Q344 234 350 226 Q356 242 350 256 Q354 246 356 238
+           Q362 250 358 262 Q354 274 344 280 Z"
+        fill="#FFB020"/>
+
+  <!-- Flame core -->
+  <path d="M340 270 Q334 258 336 248 Q340 244 344 250 Q346 258 340 272 Z"
+        fill="#FFE033"/>
+
+  <!-- Wordmark shadow -->
+  <text x="343" y="358" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="54" font-weight="700"
+        fill="#8B2200" opacity="0.25" letter-spacing="2">GaramGaram</text>
+
+  <!-- Wordmark -->
+  <text x="340" y="355" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="54" font-weight="700"
+        fill="#E25C1A" letter-spacing="2">GaramGaram</text>
+
+  <!-- Tagline -->
+  <text x="340" y="378" text-anchor="middle"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="13" fill="#C0601A" letter-spacing="5">HOT  &amp;  FRESH  DELIVERY</text>
+
+  <!-- Decorative lines -->
+  <line x1="108" y1="371" x2="192" y2="371" stroke="#E25C1A" stroke-width="1" opacity="0.5"/>
+  <line x1="488" y1="371" x2="572" y2="371" stroke="#E25C1A" stroke-width="1" opacity="0.5"/>
+  <circle cx="200" cy="371" r="2.5" fill="#E25C1A" opacity="0.6"/>
+  <circle cx="480" cy="371" r="2.5" fill="#E25C1A" opacity="0.6"/>
+
+</svg>
